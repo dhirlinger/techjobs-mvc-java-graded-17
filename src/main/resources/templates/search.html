@@ -20,10 +20,10 @@
                         name="searchType"
                         th:id="${column.key}"
                         th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
+                        th:checked="${type} ? ${column.key == type} : ${column.key == 'all'}"/>
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
-
+        <!--${column.key == 'all'}-->
     </p>
 
     <p>
